@@ -4,7 +4,7 @@
  * @Author: Tang
  * @Date: 2021-07-31 18:09:34
  * @LastEditors: Tang
- * @LastEditTime: 2021-07-31 18:21:12
+ * @LastEditTime: 2021-07-31 20:46:54
  */
 import React, { Component } from "react";
 import { Layout } from "antd";
@@ -40,7 +40,82 @@ class DefineSider extends Component {
               icon: "",
               children: [],
             },
+            {
+              path: "/base/charts/pie",
+              title: "饼图",
+              icon: "",
+              children: [],
+            },
           ],
+        },
+        {
+          path: "/base/nestedRoutes",
+          title: "嵌套路由",
+          icon: "",
+          children: [
+            {
+              path: "/base/nestedRoutes/route1",
+              title: "嵌套一级路由",
+              icon: "",
+              children: [],
+            },
+            {
+              path: "/base/nestedRoutes/route2",
+              title: "嵌套二级路由",
+              icon: "",
+              children: [
+                {
+                  path: "/base/nestedRoutes/route2/route1",
+                  title: "二级路由一",
+                  icon: "",
+                  children: [],
+                },
+                {
+                  path: "/base/nestedRoutes/route2/route2",
+                  title: "二级路由二",
+                  icon: "",
+                  children: [],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          path: "/base/system",
+          title: "系统设置",
+          icon: "",
+          children: [
+            {
+              path: "/base/system/menu",
+              title: "系统菜单",
+              icon: "",
+              children: [],
+            },
+            {
+              path: "/base/system/user",
+              title: "系统用户",
+              icon: "",
+              children: [],
+            },
+            {
+              path: "/base/system/role/menu",
+              title: "角色菜单",
+              icon: "",
+              children: [],
+            },
+            {
+              path: "/base/system/role/button",
+              title: "角色按钮",
+              icon: "",
+              children: [],
+            },
+          ],
+        },
+        {
+          path: "/base/test",
+          title: "本地测试",
+          icon: "",
+          children: [],
         },
       ],
     };
