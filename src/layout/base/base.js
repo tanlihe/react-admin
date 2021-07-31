@@ -4,14 +4,14 @@
  * @Author: Tang
  * @Date: 2021-07-31 17:40:42
  * @LastEditors: Tang
- * @LastEditTime: 2021-07-31 18:31:26
+ * @LastEditTime: 2021-07-31 18:54:34
  */
 
 import React, { Component } from "react";
 import { Layout } from "antd";
-import DefineSider from "../sider/sider";
-import DefineHeader from "../header/header";
-import DefineContent from "../content/content";
+import DefineSider from "./sider/sider";
+import DefineHeader from "./header/header";
+import DefineContent from "./content/content";
 
 require("./base.less");
 
