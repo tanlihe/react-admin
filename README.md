@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+<!--
+ * @Descripttion:
+ * @version:
+ * @Author: Tang
+ * @Date: 2021-07-31 16:53:07
+ * @LastEditors: Tang
+ * @LastEditTime: 2021-07-31 18:04:12
+-->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 1、命令执行
 
-## Available Scripts
+```
+cnpm run build 打包正式环境
+```
 
-In the project directory, you can run:
+```
+cnpm run start 本地开发
+```
 
-### `yarn start`
+# 2、Git 版本管理
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+以每一个需求为分支，相互独立，没有耦合关系，这样子可以实现对部分需求开发完成后暂停上线的功能(适合多人开发，且对需求是否暂停上线的项目)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 1、具体实现可以创建一个 master、future、dev，bug 分支
 
-### `yarn test`
+## 2、每次有新需求只能在最新的 master 分支上面重新拉取一个分支出来开发，master 相当于 正是环境的分支（master 不能合并 dev 分支的代码，只能合并每一个需要上线的需求的代码）
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3、dev 分支则是相当于测试环境的分支，可以合并暂时不上正式环境，但需要在测试环境上面测试的需求（dev 分支只能做合并分支处理）
 
-### `yarn build`
+## 4、feature 分支则是用来做一些实验性质的代码处理，处理完后可以合并到 dev 分支，然后删掉对应的 feature 分支
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 5、bug 分支，可以将处理测试提出来的 bug 作为一个分支处理，处理完后合并到对应的分支 或 dev 分支
